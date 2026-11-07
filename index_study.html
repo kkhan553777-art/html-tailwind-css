@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Study Notes - Beginner to Advanced</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; color: #222; background: #fff; }
+    h1 { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; }
+    h2 { border-bottom: 1px solid #999; padding-bottom: 5px; margin-top: 30px; }
+    h3 { margin-top: 20px; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: monospace; font-size: 0.9em; }
+    pre { background: #f4f4f4; padding: 12px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+    .level { padding: 12px; border-left: 6px solid #555; margin: 20px 0; background: #fafafa; }
+    .level-beginner { border-color: #2e7d32; }
+    .level-intermediate { border-color: #1565c0; }
+    .level-advanced { border-color: #b71c1c; }
+    table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+    th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+    ul, ol { padding-left: 25px; }
+    .note { font-style: italic; color: #666; }
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #999; font-size: 0.9em; color: #555; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Study Notes: Beginner to Advanced</h1>
+  <p class="note">An elaborate educational explanation covering HTML from the ground up to advanced topics. No CSS concepts explained here. No JavaScript used.</p>
+
+  <section class="level level-beginner">
+    <h2>1. Beginner Level</h2>
+
+    <h3>1.1 What is HTML?</h3>
+    <p>HTML stands for <strong>HyperText Markup Language</strong>. It is the standard markup language used to create web pages. HTML describes the structure of a page using <em>elements</em>, which are represented by <strong>tags</strong>. Tags tell the browser how to display content such as headings, paragraphs, images, links, lists, tables, and forms.</p>
+
+    <h3>1.2 Basic HTML Document Structure</h3>
+    <p>Every HTML page starts with a document type declaration, followed by the root element, then the head and body sections.</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code> — Declares the document type and version (HTML5). It must be the very first line.</li>
+      <li><code>&lt;html&gt;</code> — The root element that wraps all content on the page.</li>
+      <li><code>&lt;head&gt;</code> — Contains metadata, the page title, character set, and links to resources. It is not visible on the page.</li>
+      <li><code>&lt;body&gt;</code> — Contains all visible content that the user sees in the browser.</li>
+    </ul>
+
+    <h3>1.3 Headings and Paragraphs</h3>
+    <p>HTML provides six levels of headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>. <code>&lt;h1&gt;</code> is the most important (main page heading), and <code>&lt;h6&gt;</code> is the least important. The <code>&lt;p&gt;</code> tag defines a paragraph of text.</p>
+    <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph of text. It explains something to the reader.&lt;/p&gt;</code></pre>
+
+    <h3>1.4 Links</h3>
+
+    <p>The <code>&lt;a&gt;</code> (anchor) tag creates hyperlinks. The destination is specified with the <code>href</code> attribute.</p>
+    <pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+  &lt;a href="about.html"&gt;About Page&lt;/a&gt;
+&lt;a href="#section2"&gt;Jump to Section 2&lt;/a&gt;</code></pre>
+
+    <h3>1.5 Images</h3>
+
+    <p>The <code>&lt;img&gt;</code> tag embeds an image. It is a self-closing (void) tag. The <code>src</code> attribute specifies the image file path, and the <code>alt</code> attribute provides alternative text for accessibility and when the image cannot load.</p>
+    <pre><code>&lt;img src="photo.jpg" alt="A description of the image" width="300" height="200" /&gt;</code></pre>
+
+    <h3>1.6 Lists</h3>
+    <p>HTML supports unordered lists (<code>&lt;ul&gt;</code> with bullets), ordered lists (<code>&lt;ol&gt;</code> with numbers), and description lists (<code>&lt;dl&gt;</code> with terms and descriptions). Each item uses <code>&lt;li&gt;</code>.</p>
+    <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Cherry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h3>1.7 Text Formatting</h3>
+    <p>HTML offers tags to emphasize or mark up text inline.</p>
+    <ul>
+      <li><code>&lt;b&gt;</code> — Bold text</li>
+      <li><code>&lt;strong&gt;</code> — Important/Bold text (semantic emphasis)</li>
+      <li><code>&lt;i&gt;</code> — Italic text</li>
+      <li><code>&lt;em&gt;</code> — Emphasized text (usually italic)</li>
+      <li><code>&lt;u&gt;</code> — Underlined text</li>
+      <li><code>&lt;mark&gt;</code> — Highlighted text</li>
+      <li><code>&lt;small&gt;</code> — Smaller text</li>
+      <li><code>&lt;del&gt;</code> — Deleted text (strikethrough)</li>
+      <li><code>&lt;ins&gt;</code> — Inserted text (underlined)</li>
+      <li><code>&lt;sub&gt;</code> — Subscript</li>
+      <li><code>&lt;sup&gt;</code> — Superscript</li>
+    </ul>
+  </section>
+
+  <section class="level level-intermediate">
+    <h2>2. Intermediate Level</h2>
+
+    <h3>2.1 Semantic HTML Tags</h3>
+    <p>Semantic tags clearly describe their meaning to both the browser and the developer. Using semantic tags improves accessibility, SEO, and code readability.</p>
+    <table>
+      <tr><th>Tag</th><th>Purpose</th></tr>
+      <tr><td><code>&lt;header&gt;</code></td><td>Introductory content or navigation links, usually at the top of a page or section.</td></tr>
+      <tr><td><code>&lt;nav&gt;</code></td><td>Major navigation block, such as menus.</td></tr>
+      <tr><td><code>&lt;main&gt;</code></td><td>The dominant content of the &lt;body&gt;. There should be only one &lt;main&gt; per page (excluding hidden ones).</td></tr>
+      <tr><td><code>&lt;section&gt;</code></td><td>A thematic grouping of content, typically with a heading.</td></tr>
+      <tr><td><code>&lt;article&gt;</code></td><td>Independent, self-contained content like a blog post or news item.</td></tr>
+      <tr><td><code>&lt;aside&gt;</code></td><td>Content tangentially related to the main content, such as sidebars.</td></tr>
+      <tr><td><code>&lt;footer&gt;</code></td><td>Footer for a page or section, often containing copyright and contact info.</td></tr>
+      <tr><td><code>&lt;figure&gt;</code></td><td>Self-contained content like an image, diagram, or code snippet.</td></tr>
+      <tr><td><code>&lt;figcaption&gt;</code></td><td>A caption or description for the parent &lt;figure&gt;.</td></tr>
+      <tr><td><code>&lt;details&gt;</code> and &lt;summary&gt;</td><td>A disclosure widget that the user can expand or collapse.</td></tr>
+      <tr><td><code>&lt;mark&gt;</code></td><td>Highlighted or marked text.</td></tr>
+      <tr><td><code>&lt;time&gt;</code></td><td>A specific time or date, machine-readable via the datetime attribute.</td></tr>
+    </table>
+
+    <h3>2.2 The &lt;main&gt; Tag</h3>
+    <p>The <code>&lt;main&gt;</code> element represents the primary content of a document. It should contain content that is unique to that page and not repeated across pages (such as navigation, logos, or footers). A page should normally have only one <code>&lt;main&gt;</code> element that is not hidden.</p>
+    <pre><code>&lt;body&gt;
+  &lt;header&gt;...site header...&lt;/header&gt;
+  &lt;nav&gt;...navigation...&lt;/nav&gt;
+  &lt;main&gt;
+    &lt;h1&gt;Page Topic&lt;/h1&gt;
+    &lt;p&gt;The unique, primary content goes here.&lt;/p&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;...site footer...&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+    <h3>2.3 Tables</h3>
+    <p>HTML tables organize data into rows and columns. <code>&lt;table&gt;</code> is the container, <code>&lt;tr&gt;</code> defines a row, <code>&lt;th&gt;</code> defines a header cell, and <code>&lt;td&gt;</code> defines a data cell.</p>
+    <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Role&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alice&lt;/td&gt;
+      &lt;td&gt;Developer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob&lt;/td&gt;
+      &lt;td&gt;Designer&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+    <h3>2.4 HTML Entities</h3>
+    <p>Some characters have special meaning in HTML (such as <code>&lt;</code> and <code>&gt;</code>) and must be written as entities so they display as text instead of being interpreted as tags.</p>
+    <ul>
+      <li><code>&amp;lt;</code> — less than (&lt;)</li>
+      <li><code>&amp;gt;</code> — greater than (&gt;)</li>
+      <li><code>&amp;amp;</code> — ampersand (&amp;)</li>
+      <li><code>&amp;quot;</code> — double quote (")</li>
+      <li><code>&amp;apos;</code> — apostrophe (')</li>
+      <li><code>&amp;nbsp;</code> — non-breaking space</li>
+      <li><code>&amp;copy;</code> — copyright symbol (©)</li>
+    </ul>
+
+    <h3>2.5 SVG (Scalable Vector Graphics)</h3>
+    <p>SVG lets you draw vector graphics directly inside HTML using XML-based markup. Because it is vector-based, it scales without losing quality. You embed SVG with the <code>&lt;svg&gt;</code> container and draw shapes inside it.</p>
+    <pre><code>&lt;svg width="200" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;rect x="10" y="10" width="180" height="80" fill="blue" /&gt;
+  &lt;circle cx="100" cy="50" r="40" fill="red" /&gt;
+  &lt;text x="100" y="70" text-anchor="middle" fill="white"&gt;SVG Example&lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+    <p>Common SVG elements include <code>&lt;rect&gt;</code> (rectangle), <code>&lt;circle&gt;</code>, <code>&lt;ellipse&gt;</code>, <code>&lt;line&gt;</code>, <code>&lt;polygon&gt;</code>, <code>&lt;path&gt;</code>, and <code>&lt;text&gt;</code>.</p>
+
+    <h3>2.6 Audio and Video</h3>
+    <p>HTML5 provides native tags to embed multimedia without plugins.</p>
+    <pre><code>&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg" /&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;video width="320" height="240" controls poster="thumbnail.jpg"&gt;
+  &lt;source src="movie.mp4" type="video/mp4" /&gt;
+  Your browser does not support the video element.
+&lt;/video&gt;</code></pre>
+    <ul>
+      <li><code>controls</code> — shows play, pause, and volume controls.</li>
+      <li><code>src</code> or nested <code>&lt;source&gt;</code> — specifies the media file.</li>
+      <li><code>type</code> — tells the browser the MIME type of the media.</li>
+      <li><code>poster</code> — image shown while the video is downloading.</li>
+      <li><code>autoplay</code> — starts playing automatically.</li>
+      <li><code>loop</code> — repeats the media.</li>
+      <li><code>muted</code> — starts with sound off.</li>
+    </ul>
+
+    <h3>2.7 Iframes</h3>
+    <p>The <code>&lt;iframe&gt;</code> tag embeds another HTML page within the current page.</p>
+    <pre><code>&lt;iframe src="https://example.com" width="600" height="400" title="Embedded page"&gt;&lt;/iframe&gt;</code></pre>
+
+    <h3>2.8 Meta Tags</h3>
+    <p>Meta tags live in the <code>&lt;head&gt;</code> and provide metadata about the HTML document.</p>
+    <pre><code>&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="description" content="A study page about HTML" /&gt;
+&lt;meta name="author" content="Student" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code></pre>
+    <ul>
+      <li><code>charset</code> — defines the character encoding (UTF-8 is standard).</li>
+      <li><code>viewport</code> — controls layout on mobile browsers.</li>
+      <li><code>description</code> — used by search engines.</li>
+    </ul>
+  </section>
+
+  <section class="level level-advanced">
+    <h2>3. Advanced Level</h2>
+
+    <h3>3.1 HTML Forms</h3>
+    <p>Forms collect user input. The <code>&lt;form&gt;</code> element wraps controls such as text fields, checkboxes, radio buttons, select menus, and buttons. The <code>action</code> attribute tells the form where to send data, and <code>method</code> defines how (usually GET or POST).</p>
+    <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Full Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required /&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required /&gt;
+
+  &lt;label&gt;
+    &lt;input type="checkbox" name="terms" /&gt; I accept the terms
+  &lt;/label&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Choose an option&lt;/legend&gt;
+    &lt;label&gt;
+      &lt;input type="radio" name="choice" value="a" /&gt; Option A
+    &lt;label&gt;
+    &lt;label&gt;
+      &lt;input type="radio" name="choice" value="b" /&gt; Option B
+    &lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;label for="color"&gt;Favorite Color:&lt;/label&gt;
+  &lt;input type="color" id="color" name="color" /&gt;
+
+  &lt;label for="rating"&gt;Rating (1-5):&lt;/label&gt;
+  &lt;input type="number" id="rating" name="rating" min="1" max="5" /&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;button type="reset"&gt;Reset&lt;/button&gt;
+    <h3>3.2 Common Input Types</h3>
+    <table>
+      <tr><th>type</th><th>Description</th></tr>
+      <tr><td><code>text</code></td><td>Single-line text input.</td></tr>
+      <tr><td><code>password</code></td><td>Masked text input.</td></tr>
+      <tr><td><code>email</code></td><td>Email address with basic validation.</td></tr>
+      <tr><td><code>tel</code></td><td>Telephone number.</td></tr>
+      <tr><td><code>url</code></td><td>Website URL.</td></tr>
+      <tr><td><code>number</code></td><td>Numeric input.</td></tr>
+      <tr><td><code>range</code></td><td>Slider control.</td></tr>
+      <tr><td><code>date</code></td><td>Date picker.</td></tr>
+      <tr><td><code>datetime-local</code></td><td>Date and time picker.</td></tr>
+      <tr><td><code>checkbox</code></td><td>On/off toggle.</td></tr>
+      <tr><td><code>radio</code></td><td>Select one from a group.</td></tr>
+      <tr><td><code>file</code></td><td>File upload.</td></tr>
+      <tr><td><code>hidden</code></td><td>Not visible to user, but submitted with form.</td></tr>
+      <tr><td><code>submit</code></td><td>Submits the form.</td></tr>
+      <tr><td><code>reset</code></td><td>Resets all form fields.</td></tr>
+      <tr><td><code>button</code></td><td>Clickable button with no default behavior.</td></tr>
+      <tr><td><code>color</code></td><td>Color picker.</td></tr>
+      <tr><td><code>search</code></td><td>Search field.</td></tr>
+    </table>
+
+    <h3>3.3 Important Form Attributes</h3>
+    <ul>
+      <li><code>name</code> — identifies the data when the form is submitted.</li>
+      <li><code>id</code> — unique identifier used by <code>&lt;label for&gt;</code> to link a label to its control.</li>
+      <li><code>placeholder</code> — hint text shown inside an empty input.</li>
+      <li><code>required</code> — makes a field mandatory before submission.</li>
+      <li><code>readonly</code> — field can be read but not edited.</li>
+      <li><code>disabled</code> — field is not editable and not submitted.</li>
+      <li><code>min</code>, <code>max</code> — minimum and maximum values for number/range/date inputs.</li>
+      <li><code>pattern</code> — regular expression the value must match.</li>
+      <li><code>multiple</code> — allows more than one value (files or emails).</li>
+      <li><code>accept</code> — specifies allowed file types for file inputs.</li>
+    </ul>
+
+    <h3>3.4 Select Menus and Textareas</h3>
+    <p><code>&lt;select&gt;</code> creates a dropdown list, and <code>&lt;textarea&gt;</code> creates a multi-line text area.</p>
+    <pre><code>&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;label for="bio"&gt;Biography:&lt;/label&gt;
+&lt;textarea id="bio" name="bio" rows="4" cols="50"&gt;Write something about yourself...&lt;/textarea&gt;</code></pre>
+
+    <h3>3.5 Datalist and Output</h3>
+    <p><code>&lt;datalist&gt;</code> provides autocomplete suggestions for an input. <code>&lt;output&gt;</code> displays the result of a calculation or user action.</p>
+    <pre><code>&lt;input list="browsers" name="browser" /&gt;
+&lt;datalist id="browsers"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Safari"&gt;
+&lt;/datalist&gt;
+
+&lt;output id="result" name="result"&gt;0&lt;/output&gt;</code></pre>
+
+    <h3>3.6 Fieldset and Legend</h3>
+    <p><code>&lt;fieldset&gt;</code> groups related controls together, and <code>&lt;legend&gt;</code> provides a caption for that group.</p>
+    <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;Account Information&lt;/legend&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username" /&gt;
+&lt;/fieldset&gt;</code></pre>
+
+    <h3>3.7 Scripting and Noscript</h3>
+    <p><code>&lt;script&gt;</code> embeds or references JavaScript. <code>&lt;noscript&gt;</code> displays fallback content if scripts are disabled or unsupported.</p>
+    <pre><code>&lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view this page correctly.&lt;/noscript&gt;</code></pre>
+
+    <h3>3.8 HTML Best Practices</h3>
+    <ul>
+      <li>Always declare <code>&lt;!DOCTYPE html&gt;</code> as the first line.</li>
+      <li>Use semantic tags (&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;, etc.) instead of only &lt;div&gt; and &lt;span&gt;.</li>
+      <li>Provide meaningful <code>alt</code> text on every image.</li>
+      <li>Associate every input with a <code>&lt;label&gt;</code> using matching <code>for</code> and <code>id</code> attributes.</li>
+      <li>Use <code>lang</code> on the <code>&lt;html&gt;</code> tag to declare the page language.</li>
+      <li>Keep tags properly nested and closed.</li>
+      <li>Use heading levels in order (&lt;h1&gt; then &lt;h2&gt; then &lt;h3&gt;) without skipping levels.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>HTML Study Notes — educational reference covering beginner to advanced HTML topics.</p>
+  </footer>
+</body>
+</html>
