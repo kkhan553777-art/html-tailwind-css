@@ -4,23 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index_study.html pactice in this document for semantic page layout</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dist/style.css">
 
-    <style>
-        
-         body{
-         margin-bottom: 1000px;
-         background-color: rgb(53, 53, 56);
-        }
-
-        html {
-       scroll-behavior: smooth;          /* Smooth scroll when clicking anchor links */
-        overflow-y: auto;                 /* Allow vertical scrolling */
-       scroll-padding: 8rem;             /* Padding at top when scrolling to sections */
-       -webkit-text-size-adjust: 100%;   /* Prevent iOS Safari from auto-scaling text */
-       }
-
-       .HH{
+    
+     
+    
+     
         margin: 5px 0px 10px 0px;
         color: rgb(48, 65, 223);
         background-color: rgb(32, 32, 32);
@@ -79,22 +68,22 @@
         }
 
     
-    </style>
+    
     </head>
 
-    <body>
+    <body class="mb-[1000px] bg-[rgb(53,53,56)]">
     
     <header>
-        <h2 class="HH">LEARNING SEMANTIC TAGS FOR PAGE LAYOUT STRUCTURE:</h2>
+        <h2 class="m-[5px_0px_10px_0px] text-[rgb(48,65,223)] bg-[rgb(32,32,32)] text-center underline">LEARNING SEMANTIC TAGS FOR PAGE LAYOUT STRUCTURE:</h2>
 
-        <nav class="primary-nav" aria-label="Primary"> <!--BOTH MAIN MENU & BREADCRUMB -->
+        <nav class="mt-4 mb-4 flex gap-8 justify-center items-center" aria-label="Primary"> <!--BOTH MAIN MENU & BREADCRUMB -->
              <ul>
-                <li><a href="https://github.com/" aria-current="location">HOME</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/about" aria-current="page">
+                <li><a class="text-[rgb(8,236,179)] no-underline" href="https://github.com/" aria-current="location">HOME</a></li>
+                <li><a class="text-[rgb(8,236,179)] no-underline" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                <li><a class="text-[rgb(8,236,179)] no-underline" href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                <li><a class="text-[rgb(8,236,179)] no-underline" href="https://developer.mozilla.org/en-US/about" aria-current="page">
                  ABOUT PAGE</a></li>
-                 <li><a href="/LEARN">LEARN MORE </a></li>
+                 <li><a class="text-[rgb(8,236,179)] no-underline" href="/LEARN">LEARN MORE </a></li>
              </ul>
 
                 <form action="/search" method="get">
@@ -106,25 +95,25 @@
                         name="q"
                         placeholder="search.."> 
 
-                        <button class="search-btn"type="submit" aria-label="search">🔍</button>
+                        <button class="hover:bg-white/10"type="submit" aria-label="search">🔍</button>
  
                 </form>
              
         </nav>
         <hr>
         
-        <aside class="toc">  
+        <aside class="block w-[250px] h-[1000px] bg-[rgb(53,53,56)] border-2 border-[rgb(66,65,65)] box-border overflow-y-auto">  
         <nav class aria-labelledby="toc-title">
-            <h3 style="text-decoration: underline; text-align: center; color: rgb(8, 236, 179);">TABLE OF CONTENTS </h3>
+            <h3 class="underline text-center text-[rgb(8,236,179)]">TABLE OF CONTENTS </h3>
                 <div class="left-sidebar-content">
-                <ul class="toc-list">
-                    <li class="toc-item"><a href="#INTRODUCTION">INTRODUCTION</a>
+                <ul class="flex list-none gap-6">
+                    <li class="m-6 p-6 list-none text-center"><a class="text-[rgb(8,236,179)] no-underline" href="#INTRODUCTION">INTRODUCTION</a>
                     <div id="intro">
                         <h5>introduction preview</h5>
                         <p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).</p>
                     </div> </li>
                     
-                    <li class="toc-item"><a href="HTML=BASICS">HTML BASICS</a>
+                    <li class="m-6 p-6 list-none text-center"><a class="text-[rgb(8,236,179)] no-underline" href="HTML=BASICS">HTML BASICS</a>
                         <div id="HTML-BASICS">
                             <h5>HTML BASICS PREVIEW</h5>
                             <pre>
@@ -137,8 +126,8 @@
                             </pre>
                         </div>
                     </li>
-                    <li class="toc-item"><a href="LAYOUT-&-SEMNATICS">LAYOUT & SEMNATICS</a></li>
-                    <li class="toc-item"><a href="CONCLUSION">CONCLUSION</a></li>
+                    <li class="m-6 p-6 list-none text-center"><a class="text-[rgb(8,236,179)] no-underline" href="LAYOUT-&-SEMNATICS">LAYOUT & SEMNATICS</a></li>
+                    <li class="m-6 p-6 list-none text-center"><a class="text-[rgb(8,236,179)] no-underline" href="CONCLUSION">CONCLUSION</a></li>
                 </ul> </div>
     
 

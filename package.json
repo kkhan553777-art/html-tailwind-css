@@ -1,0 +1,27 @@
+{
+  "name": "html-tailwind-css",
+  "version": "1.0.0",
+  "description": "This repository contains HTML practice files used for learning semantic page layout, CSS fundamentals, and web development structure.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkhan553777-art/html-tailwind-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kkhan553777-art/html-tailwind-css/issues"
+  },
+  "homepage": "https://github.com/kkhan553777-art/html-tailwind-css#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.19"
+  }
+}
